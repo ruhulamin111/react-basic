@@ -3,9 +3,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <h1>hello world</h1>
       <Shop></Shop>
-
 
     </div>
   );
@@ -13,9 +11,9 @@ function App() {
 
 function Shop() {
   return (
-    <div>
+    <div className='shop'>
       <h1>Beliver Sign</h1>
-      <h1>Beliver Sign</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam necessitatibus perspiciatis repellat rem saepe tempore. Distinctio quod minus magnam tenetur.</p>
     </div>
   )
 }
