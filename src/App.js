@@ -44,10 +44,30 @@ function ExternalData() {
   useEffect(() => {
     fetch('')
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => setUsers(data))
   }, [])
+
+
   return (
     <div>
+      {
+        users.map(user => <User
+          name={user.name}
+          email={user.email}
+        ></User>)
+      }
+    </div>
+  )
+}
+
+// user show 
+function User(props) {
+
+  return (
+    <div>
+      <h1>Car users</h1>
+      <p><b>Name: </b>{props.name}</p>
+      <p><b>Email: </b>{props.email}</p>
 
     </div>
   )
