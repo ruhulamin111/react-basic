@@ -38,7 +38,8 @@
   }
 }
 
-.shop {
+.shop,
+.school {
   border: 1px solid salmon;
   padding: 1em;
   margin: 2em;
