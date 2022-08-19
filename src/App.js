@@ -12,15 +12,12 @@ function App() {
     { name: 'shahen shah', age: 29 },
     { name: 'niyamot ullah', age: 38 }
   ];
-  // state 
-  const [count, setCount] = useState(0);
-  const increase = () => setCount(count + 1);
-  const decrease = () => setCount(count - 1);
 
   return (
     <div>
 
-
+      {/* counter show  */}
+      <Count></Count>
 
       {/* product show  */}
       {
@@ -44,19 +41,26 @@ function App() {
 
 // counter component 
 function Count() {
+  // state 
+  const [count, setCount] = useState(0);
+  const increase = () => setCount(count + 1);
+  const decrease = () => setCount(count - 1);
+
 
   return (
     <div>
-      <h2>Count : { }</h2>
-      <button>Increase</button>
+      <h2>Count : {count}</h2>
+      <button onClick={increase}>Increase</button>
       <br />
-      <button>Decrease</button>
+      <br />
+      <button onClick={decrease}>Decrease</button>
     </div>
   )
 }
 
 // class seven component 
 function Seven(props) {
+
   return (
     <div className='school'>
       <h2>Name: {props.name} </h2>
