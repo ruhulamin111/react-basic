@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -38,6 +38,20 @@ function App() {
   );
 }
 
+// fetch data 
+function ExternalData() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetch('')
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }, [])
+  return (
+    <div>
+
+    </div>
+  )
+}
 
 // counter component 
 function Count() {
@@ -45,7 +59,6 @@ function Count() {
   const [count, setCount] = useState(0);
   const increase = () => setCount(count + 1);
   const decrease = () => setCount(count - 1);
-
 
   return (
     <div>
