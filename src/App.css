@@ -39,7 +39,8 @@
 }
 
 .shop,
-.school {
+.school,
+.user {
   border: 1px solid salmon;
   padding: 1em;
   margin: 2em;

@@ -19,6 +19,7 @@ function App() {
       {/* counter show  */}
       <Count></Count>
 
+      <ExternalData></ExternalData>
       {/* product show  */}
       {
         products.map(product => <Shop name={product}></Shop>)
@@ -42,7 +43,7 @@ function App() {
 function ExternalData() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch('')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(data => setUsers(data))
   }, [])
@@ -64,7 +65,7 @@ function ExternalData() {
 function User(props) {
 
   return (
-    <div>
+    <div className='user'>
       <h1>Car users</h1>
       <p><b>Name: </b>{props.name}</p>
       <p><b>Email: </b>{props.email}</p>
@@ -81,7 +82,7 @@ function Count() {
   const decrease = () => setCount(count - 1);
 
   return (
-    <div>
+    <div className='user'>
       <h2>Count : {count}</h2>
       <button onClick={increase}>Increase</button>
       <br />
